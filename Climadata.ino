@@ -1,12 +1,11 @@
-
-
 // CLIMADATA - ESP8266+DHT22+MQ135+ArduinoIDE+Thingspeak IoT Air Quality monitor
 // -----------------------------------------------------------------------------
-// https://github.com/
+// https://github.com/crispSV/climadata
 // 
 //
 //
-// LIVE Data for the Climate Challenge Hackathon https://thingspeak.com/channels/1199738
+// LIVE Data for the Climate Challenge Hackathon https://www.goethe.de/prj/one/en/gea/for/clc.html?wt_sc=theclimatechallenge
+// ThingSpeak DATA  https://thingspeak.com/channels/1199738
 
 
 
@@ -21,13 +20,13 @@
 
 //ThingSpeak API parameters
 const char* host = "api.thingspeak.com"; // ThingSpeak api domain  
-String ApiKey = "Q1UKZXAHM5S0AT6V";            // ThingSpeak API Key
+String ApiKey = "myapikey";            // ThingSpeak API Key
 String path = "/update?key=" + ApiKey ; //Channel path
 
 //WIFI
 
-const char* ssid = "CP";        // WIFI SSID
-const char* pass = "bibikakia";    // WIFI PASSWORD
+const char* ssid = "myssid";        // WIFI SSID
+const char* pass = "ssidpasswd";    // WIFI PASSWORD
 
 char temperatureString[6];
 char humidityString[6];
