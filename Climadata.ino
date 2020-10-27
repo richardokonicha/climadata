@@ -107,6 +107,6 @@ if (isnan(humidity) || isnan(temperature))
                "Connection: keep-alive\r\n\r\n");
                
 
-  delay(60000);
+  delay(60000);  //update every minute
 
 }
