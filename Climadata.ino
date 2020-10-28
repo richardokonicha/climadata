@@ -1,7 +1,7 @@
 // CLIMADATA - ESP8266+DHT22+MQ135+ArduinoIDE+Thingspeak IoT Air Quality monitor
 // -----------------------------------------------------------------------------
+// Author: Christos Papathanasiou 2020
 // https://github.com/crispSV/climadata
-// 
 //
 //
 // LIVE Data for the Climate Challenge Hackathon https://www.goethe.de/prj/one/en/gea/for/clc.html?wt_sc=theclimatechallenge
@@ -23,7 +23,7 @@ const char* host = "api.thingspeak.com"; // ThingSpeak api domain
 String ApiKey = "myapikey";            // ThingSpeak API Key
 String path = "/update?key=" + ApiKey ; //Channel path
 
-//WIFI
+//WIFI Credentials
 
 const char* ssid = "myssid";        // WIFI SSID
 const char* pass = "ssidpasswd";    // WIFI PASSWORD
@@ -71,9 +71,9 @@ void setup(void){
  
 void loop() {
 
-MQ135 gasSensor = MQ135(A0);  // MQ 135 airquality sensor on pin Α0
-float temperature = dht.readTemperature(); // Gets the values of the temperature
-float humidity = dht.readHumidity(); // Gets the values of the humidity 
+MQ135 gasSensor = MQ135(A0);  // MQ 135 air quality sensor on pin Α0
+float temperature = dht.readTemperature(); // Gets the values of temperature
+float humidity = dht.readHumidity(); // Gets the values of humidity 
 float air_quality = gasSensor.getPPM();  //Gets the value of Air Quality
 
 if (isnan(humidity) || isnan(temperature)) 
@@ -81,7 +81,7 @@ if (isnan(humidity) || isnan(temperature))
                      Serial.println("Failed to read from DHT sensor!");
                       return;
                  }
-                 
+// Convert DHT22 data to strings                 
  dtostrf(temperature, 2, 0, temperatureString);
  dtostrf(humidity, 2, 0, humidityString);
  
