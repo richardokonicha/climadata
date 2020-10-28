@@ -1,4 +1,4 @@
-// CLIMADATA - ESP8266+DHT22+MQ135+ArduinoIDE+Thingspeak IoT Air Quality monitor
+// CLIMADATABOX - ESP8266+DHT22+MQ135+ArduinoIDE+Thingspeak IoT Air Quality monitor
 // -----------------------------------------------------------------------------
 // https://github.com/crispSV/climadata
 // 
