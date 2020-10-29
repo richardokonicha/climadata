@@ -13,7 +13,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* This code is initialy written for ClimateChallenge Hackathon https://www.goethe.de/prj/one/en/gea/for/clc.html?wt_sc=theclimatechallenge entry
+* This code is initialy written for ClimateChallenge Hackathon https://theclimatechallenge.devpost.com/ entry
 
 
 ### Links
