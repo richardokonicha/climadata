@@ -15,6 +15,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 * This code is initialy written for ClimateChallenge Hackathon https://theclimatechallenge.devpost.com/ entry
 
+## To Do
+
+- Use LORAWAN instead of WiFi so every node can be remotely managed and upgraded.
+- Add PM2.5 sensor to measure dust concentrations of 10 microns or smaller in diameter.
+- Use a solar panel and a LiON battery to make system autonomous. Enable ESP8266 deep sleep mode to conserve energy.
+- Use GPS module (UBLOX-7M) to know the exact location of the sensor.
 
 ### Links
 https://www.goethe.de/prj/one/en/gea/for/clc.html?wt_sc=theclimatechallenge
