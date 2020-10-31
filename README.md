@@ -5,6 +5,8 @@ ESP-8266 uploads data to ThingSpeak IOT service. A web platform visualize data f
 
 ## Author
 * **Chris Papathanasiou** <developer@drmac.gr>
+* See also the list of  [contributors](https://github.com/crispSV/climadata/blob/master/contributors) who participated in this project.
+
 
 
 ## License
