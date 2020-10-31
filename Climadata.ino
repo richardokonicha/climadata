@@ -24,7 +24,6 @@ String ApiKey = "myapikey";            // ThingSpeak API Key
 String path = "/update?key=" + ApiKey ; //Channel path
 
 //WIFI Credentials
-
 const char* ssid = "myssid";        // WIFI SSID
 const char* pass = "ssidpasswd";    // WIFI PASSWORD
 
@@ -49,7 +48,7 @@ void setup(void){
   
   WiFi.begin(ssid, pass);
  
- // Wait for connection
+ // Wait for WiFi connection
   while (WiFi.status() != WL_CONNECTED) {
     delay(100);
     Serial.print(".");
@@ -71,27 +70,27 @@ void setup(void){
  
 void loop() {
 
-MQ135 gasSensor = MQ135(A0);  // MQ 135 air quality sensor on pin Α0
-float temperature = dht.readTemperature(); // Gets the values of temperature
-float humidity = dht.readHumidity(); // Gets the values of humidity 
-float air_quality = gasSensor.getPPM();  //Gets the value of Air Quality
+MQ135 gasSensor = MQ135(A0);                // MQ 135 air quality sensor on pin Α0
+float temperature = dht.readTemperature();  // Gets the value of temperature
+float humidity = dht.readHumidity();        // Gets the value of humidity 
+float air_quality = gasSensor.getPPM();     // Gets the value of Air Quality
 
 if (isnan(humidity) || isnan(temperature)) 
                  {
                      Serial.println("Failed to read from DHT sensor!");
                       return;
                  }
+
 // Convert DHT22 data to strings                 
  dtostrf(temperature, 2, 0, temperatureString);
  dtostrf(humidity, 2, 0, humidityString);
  
-
 // send DHT and MQ135 data to the serial console
- Serial.print("Temp ");
+ Serial.print("Temperature ");
  Serial.println(temperatureString);
- Serial.print("Hum ");
+ Serial.print("Humidity ");
  Serial.println(humidityString);
- Serial.print("AirQ ");
+ Serial.print("Air Quality ");
  Serial.println(air_quality);
  
   WiFiClient client;
